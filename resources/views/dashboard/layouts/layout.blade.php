@@ -29,10 +29,10 @@
 </head>
 <body>
   <div>
-    @include('layouts.includes.admin.header')
-    @include('layouts.includes.admin.sidebar')
+    @include('dashboard.layouts.includes.header')
+    @include('dashboard.layouts.includes.sidebar')
     {{ $slot }}
-    @include('layouts.includes.admin.footer')
+    @include('dashboard.layouts.includes.footer')
   </div>
 </body>
 </html>

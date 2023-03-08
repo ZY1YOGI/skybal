@@ -1,0 +1,103 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth !important;
+}
+body {
+    @apply min-h-screen overflow-x-hidden antialiased transition-all duration-75 bg-body-light dark:bg-body-dark;
+}
+
+section {
+    @apply max-w-[100vw] overflow-x-hidden;
+}
+
+#header {
+    @apply max-w-[100vw] w-screen border-b-[2.5px] border-b-transparent dark:bg-gray-900 bg-gray-50/30 py-1 select-none overflow-x-hidden;
+    border-image: linear-gradient(0.25turn, #2d003f, #420021, #150038);
+    border-image-slice: 1;
+    box-shadow: 0 0 0.8rem #6f12e962;
+}
+
+.negative {
+    @apply flex items-center justify-between px-8;
+}
+.nav-links {
+    @apply flex items-center justify-center space-x-3 max-md:hidden;
+}
+.nav-links .nav-link a {
+    @apply px-3 py-2 text-lg font-medium transition duration-150 ease-out border-white dark:text-white hover:scale-110 hover:bg-gray-900 dark:hover:bg-white dark:hover:text-gray-900 hover:text-white hover:border-y-2 rounded-xl;
+}
+
+.btn-search {
+    @apply p-2.5 hover:bg-gray-900 dark:text-white hover:text-white hover:dark:bg-slate-700 transition duration-150 ease-out rounded-xl;
+}
+
+.btn-theme {
+    @apply p-2 transition duration-150 ease-out hover:bg-gray-900 hover:text-white dark:text-white hover:dark:bg-slate-700 rounded-xl;
+}
+
+#hero {
+    @apply flex justify-center items-center h-[85vh] border-b-4 border_gradient;
+}
+
+#hero img {
+    animation: up-down 1.9s ease-in-out infinite alternate-reverse both;
+}
+
+#clients img {
+    @apply max-w-[45%] py-4 grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 mx-auto;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+.border_gradient {
+    border-image: linear-gradient(0.25turn, #7404a0, #ff0000, #3b009b);
+    border-image-slice: 1;
+    border-bottom-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 10px #6909e6;
+    border-radius: 8px;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+@layer components {
+    .ui-input-box {
+        @apply flex flex-col select-none;
+    }
+
+    .ui-input {
+        @apply p-3 w-96 text-lg text-gray-900 rounded-full outline-offset-4 border-2 border-[#1100ff10] shadow-sm shadow-blue-300
+        placeholder:text-gray-300 placeholder:text-base outline-indigo-800;
+    }
+
+    .ui-input-label {
+        @apply px-3 pb-2 text-xl font-semibold;
+    }
+
+    .ui-input-error {
+        @apply px-3 pt-2 text-sm text-red-600 dark:text-red-400;
+    }
+}

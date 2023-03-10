@@ -14,7 +14,7 @@
   <title>{{ $title }}</title>
   {{-- Icon --}}
   <link rel="shortcut icon" href={{ Vite::asset('resources/image/logo.svg') }} type="image/x-icon" />
-  
+
   {{-- Fonts --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" />
@@ -30,11 +30,12 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-  <div>
     @include('dashboard.layouts.includes.header')
     @include('dashboard.layouts.includes.sidebar')
-    {{ $slot }}
-    @include('dashboard.layouts.includes.footer')
-  </div>
+
+    <div class="ml-16 mt-12 min-h-screen relative">
+        {{ $slot }}
+        @include('dashboard.layouts.includes.footer')
+    </div>
 </body>
 </html>

@@ -12,7 +12,9 @@
   <meta name="keywords" content="{{ $keywords }}" />
   {{-- Title --}}
   <title>{{ $title }}</title>
-
+  {{-- Icon --}}
+  <link rel="shortcut icon" href={{ Vite::asset('resources/image/logo.svg') }} type="image/x-icon" />
+  
   {{-- Fonts --}}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" />

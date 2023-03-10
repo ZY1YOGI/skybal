@@ -17,7 +17,7 @@ section {
     @apply max-w-[100vw] overflow-x-hidden;
 }
 
-#header {
+.header {
     @apply max-w-[100vw] w-screen border-b-[2.5px] border-b-transparent dark:bg-gray-900 bg-gray-50/30 py-1 select-none overflow-x-hidden;
     border-image: linear-gradient(0.25turn, #2d003f, #420021, #150038);
     border-image-slice: 1;
@@ -42,15 +42,15 @@ section {
     @apply p-2 transition duration-150 ease-out hover:bg-gray-900 hover:text-white dark:text-white hover:dark:bg-slate-700 rounded-xl;
 }
 
-#hero {
+.hero {
     @apply flex justify-center items-center h-[85vh] border-b-4 border_gradient;
 }
 
-#hero img {
+.hero img {
     animation: up-down 1.9s ease-in-out infinite alternate-reverse both;
 }
 
-#clients img {
+.clients img {
     @apply max-w-[45%] py-4 grayscale hover:grayscale-0 hover:scale-110 transition-all duration-300 mx-auto;
 }
 
@@ -82,6 +82,9 @@ section {
     background-color: var(--primary-color);
     color: #fff;
 }
+
+
+
 
 @layer components {
     .ui-input-box {

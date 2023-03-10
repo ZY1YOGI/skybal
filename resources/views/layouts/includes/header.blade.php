@@ -1,4 +1,4 @@
-<header id="header">
+<header id="header" class="header">
   <nav class="negative">
     <div class="flex items-center space-x-3 max-md:space-x-1">
       <img src={{ Vite::asset('resources/image/logo.svg') }} alt="" class="w-6 h-auto dark:invert-[100%]" />

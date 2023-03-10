@@ -1,6 +1,6 @@
 <x-app-layout title="Home">
 
-  <x-section id="hero">
+  <x-section id="hero" class="hero">
     <div class="container flex items-center mx-auto max-sm:flex-col">
       <div class="text-center max-sm:order-2">
         <h1 class="text-3xl font-bold max-sm:text-xl dark:text-gray-100">Skybal > The best solutions for your Business</h1>
@@ -17,7 +17,7 @@
   </x-section>
 
 
-  <x-section id="clients">
+  <x-section id="clients" class="clients">
     <div class="grid items-center grid-cols-6 max-sm:grid-cols-3 container mx-auto rounded-b-2xl bg-[#e5eaff] dark:bg-[#0b101d] border-b border-fuchsia-600 overflow-hidden">
       @for($i = 1; $i < 7; $i++) <div class="text-center cursor-pointer">
         <img src={{ Vite::asset("resources/image/clients/client-$i.png") }} class="h-auto" alt="" />
@@ -27,7 +27,7 @@
   </x-section>
 
 
-  <x-section id="services">
+  <x-section id="services" class="services">
     <div class="container mx-auto my-16">
 
       <div class="text-center">
@@ -70,7 +70,7 @@
   </x-section>
 
 
-  <x-section id="about">
+  <x-section id="about" class="about">
     <div class="container mx-auto my-16 overflow-hidden">
       <h1 class="text-3xl text-center font-bold py-2 dark:text-white decoration-slice underline underline-offset-[5px] decoration-fuchsia-700" data-aos="fade-up" data-aos-delay="200">ABOUT US</h1>
       <div class="flex space-x-8 max-sm:block max-sm:space-y-8 max-sm:space-x-3">

@@ -33,7 +33,7 @@
     @include('dashboard.layouts.includes.header')
     @include('dashboard.layouts.includes.sidebar')
 
-    <div class="ml-16 mt-12 min-h-screen relative">
+    <div class="ml-16 mt-5 min-h-screen relative">
         {{ $slot }}
         @include('dashboard.layouts.includes.footer')
     </div>
